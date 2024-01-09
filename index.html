@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="title">
+          <img src="assets/images/icon-star.svg" alt="icon-star" />
+          <h1>FAQs</h1>
+        </div>
+
+        <div class="info">
+          <dl class="accordion" aria-expanded="false">
+            <dt>
+              <button
+                id="accordion-header-1"
+                class="accordion-title"
+                aria-controls="panel-1"
+              >
+                What is Frontend Mentor, and how will it help me?
+                <img
+                  src="assets/images/icon-plus.svg"
+                  alt="icon-plus"
+                  aria-hidden="true"
+                />
+              </button>
+            </dt>
+            <dd
+              id="accordion-panel-1"
+              class="panel"
+              aria-labelledby="accordion-header-1"
+            >
+              <p>
+                Frontend Mentor offers realistic coding challenges to help
+                developers improve their frontend coding skills with projects in
+                HTML, CSS, and JavaScript. It's suitable for all levels and
+                ideal for portfolio building.
+              </p>
+            </dd>
+          </dl>
+
+          <dl class="accordion" aria-expanded="false">
+            <dt>
+              <button
+                id="accordion-header-2"
+                class="accordion-title"
+                aria-controls="panel-2"
+              >
+                Is Frontend Mentor free?
+                <img
+                  src="assets/images/icon-plus.svg"
+                  alt="icon-plus"
+                  aria-hidden="true"
+                />
+              </button>
+            </dt>
+            <dd
+              id="accordion-panel-2"
+              class="panel"
+              aria-labelledby="accordion-header-2"
+            >
+              <p>
+                Yes, Frontend Mentor offers both free and premium coding
+                challenges, with the free option providing access to a range of
+                projects suitable for all skill levels.
+              </p>
+            </dd>
+          </dl>
+
+          <dl class="accordion" aria-expanded="false">
+            <dt>
+              <button
+                id="accordion-header-3"
+                class="accordion-title"
+                aria-controls="panel-3"
+              >
+                Can I use Frontend Mentor projects in my portfolio?
+                <img
+                  src="assets/images/icon-plus.svg"
+                  alt="icon-plus"
+                  aria-hidden="true"
+                />
+              </button>
+            </dt>
+            <dd
+              id="accordion-panel-3"
+              class="panel"
+              aria-labelledby="accordion-header-3"
+            >
+              <p>
+                Yes, you can use projects completed on Frontend Mentor in your
+                portfolio. It's an excellent way to showcase your skills to
+                potential employers!
+              </p>
+            </dd>
+          </dl>
+
+          <dl class="accordion" aria-expanded="false">
+            <dt>
+              <button
+                id="accordion-header-4"
+                class="accordion-title"
+                aria-controls="panel-4"
+              >
+                How can I get help if I'm stuck on a challenge?
+                <img
+                  src="assets/images/icon-plus.svg"
+                  alt="icon-plus"
+                  aria-hidden="true"
+                />
+              </button>
+            </dt>
+            <dd
+              id="accordion-panel-4"
+              class="panel"
+              aria-labelledby="accordion-header-4"
+            >
+              <p>
+                The best place to get help is inside Frontend Mentor's Discord
+                community. There's a help channel where you can ask questions
+                and seek support from other community members.
+              </p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/dibrooo" target="_blank">António Amaral</a>.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

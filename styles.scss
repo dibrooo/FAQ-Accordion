@@ -1,0 +1,132 @@
+$work-sans-font-path: "./assets/fonts/static";
+
+@font-face {
+  src: url("#{$work-sans-font-path}/WorkSans-Regular.ttf");
+  font-family: "Work Sans";
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("#{$work-sans-font-path}/WorkSans-SemiBold.ttf");
+  font-family: "Work Sans";
+  font-weight: 600;
+}
+
+@font-face {
+  src: url("#{$work-sans-font-path}/WorkSans-Bold.ttf");
+  font-family: "Work Sans";
+  font-weight: 700;
+}
+
+$white: hsl(0, 0%, 100%);
+$light_pink: hsl(275, 100%, 97%);
+$grayish_purple: hsl(292, 16%, 49%);
+$dark_purple: hsl(292, 42%, 14%);
+$purple: hsl(281, 77%, 53%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Work Sans";
+  min-height: 100vh;
+  background-color: $light_pink;
+  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.card {
+  margin: 25px;
+  padding: 45px 40px 15px 45px;
+  max-width: 600px;
+  background-color: $white;
+  border-radius: 15px;
+  box-shadow: hsla(292, 16%, 49%, 0.3) 0px 48px 100px 0px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: clamp(25px, 5vw, 42px);
+      height: clamp(25px, 5vw, 42px);
+    }
+
+    h1 {
+      font-size: clamp(35px, 5vw, 56px);
+      color: $dark_purple;
+    }
+  }
+
+  .info {
+    margin-top: 10px;
+  }
+}
+
+.accordion {
+  border-bottom: 1px solid $light_pink;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px 0;
+    width: 100%;
+    font-size: clamp(16px, 1.5vw, 18px);
+    font-weight: 700;
+    color: $dark_purple;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s;
+
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  .panel {
+    display: none;
+    padding-bottom: 25px;
+    line-height: 23px;
+    font-size: clamp(14px, 1.5vw, 16px);
+    color: $grayish_purple;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 375px) {
+  body {
+    background-size: 300%;
+  }
+
+  .card {
+    margin: 125px 25px;
+    padding: 25px 20px;
+  }
+}
